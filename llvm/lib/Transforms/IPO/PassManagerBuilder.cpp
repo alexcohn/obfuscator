@@ -149,13 +149,13 @@ cl::opt<bool>
                   cl::desc("Enable the GVN sinking pass (default = off)"));
 
 // Flags for obfuscation
-static cl::opt<bool> Flattening("fla", cl::init(false),
+static cl::opt<bool> Flattening("fla", cl::init(true),
                                 cl::desc("Enable the flattening pass"));
 
 static cl::opt<bool> BogusControlFlow("bcf", cl::init(false),
                                       cl::desc("Enable bogus control flow"));
 
-static cl::opt<bool> Substitution("sub", cl::init(false),
+static cl::opt<bool> Substitution("sub", cl::init(true),
                                   cl::desc("Enable instruction substitutions"));
 
 static cl::opt<std::string> AesSeed("aesSeed", cl::init(""),
@@ -167,7 +167,7 @@ static cl::opt<bool> Split("split", cl::init(false),
 static cl::opt<std::string> Seed("seed", cl::init(""),
                            cl::desc("seed for the random"));
 
-static cl::opt<bool> StringObf("sobf", cl::init(false),
+static cl::opt<bool> StringObf("sobf", cl::init(true),
                            cl::desc("Enable the string obfuscation"));
 
 // This option is used in simplifying testing SampleFDO optimizations for
